@@ -2,8 +2,6 @@
 
 const Alexa = require('alexa-sdk');
 
-const APP_ID = 42;
-
 const data = {
     JOKES: [
         'Don\'t trust atoms, they make up everything.',
@@ -20,7 +18,7 @@ const data = {
         'Time flies like an arrow, Fruit flies like a banana.',
         'Marriage is a wonderful institution, but who wants to live in an institution?',
         'Outside of a dog, a book is a man\'s best friend. Inside of a dog, it\'s too dark to read.',
-        'I never forget a face, but in your case I\'ll be glad to make an exception.'            
+        'I never forget a face, but in your case I\'ll be glad to make an exception.'
     ],
     SKILL_NAME: 'One-liner jokes',
     JOKE_MESSAGE: "Here's a joke: ",
@@ -32,7 +30,7 @@ const data = {
 
 const handlers = {
     LaunchRequest: function () {
-        this.emit('GetJoke');
+        this.emit(':ask', 'Welcome to Joker. Ask me to tell you a random joke, or a joke by Groucho Marx', data.HELP_MESSAGE);
     },
     Joke: function() {
         this.emit('GetJoke');
@@ -75,7 +73,7 @@ const handlers = {
 
 exports.handler = (event, context) => {
     const alexa = Alexa.handler(event, context);
-    alexa.APP_ID = APP_ID;
+    alexa.appId = process.env.APP_ID || '';
     alexa.registerHandlers(handlers);
     alexa.execute();
 };

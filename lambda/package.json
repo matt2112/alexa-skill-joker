@@ -1,0 +1,11 @@
+{
+  "name": "alexa-skill-joker",
+  "version": "1.0.0",
+  "description": "Custom Alexa skill for telling a joke.",
+  "main": "index.js",
+  "author": "Matt Lewis",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6"
+  }
+}
