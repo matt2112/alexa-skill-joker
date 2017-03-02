@@ -6,6 +6,7 @@
   "author": "Matt Lewis",
   "license": "ISC",
   "dependencies": {
-    "alexa-sdk": "^1.0.6"
+    "alexa-sdk": "^1.0.6",
+    "opearlo-analytics": "^0.1.9"
   }
 }

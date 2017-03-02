@@ -1,10 +1,19 @@
 {
   "intents": [
     {
-      "intent": "Joke"
+      "intent": "GetJoke"
     },
     {
       "intent": "Groucho"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
     }
   ]
 }
